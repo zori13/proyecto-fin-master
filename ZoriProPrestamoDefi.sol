@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0; 
+pragma solidity ^0.8.0;
 
 contract ZoriProPrestamoDefi{
     address public socioPrincipal;
@@ -63,7 +63,7 @@ contract ZoriProPrestamoDefi{
     //funcion que da de alta al nuevo prestamista, np porque modifica el mapping empleadosPrestamista
     //si ya esta dado de alta se le envia un error.
     function altaPrestamista(address nuevoPrestamista)public soloSocioPrincipal {
-        require(empleadosPrestamista[nuevoPrestamista]=false, "Ya has sido dado de alta");
+        require(empleadosPrestamista[nuevoPrestamista]==false, "Ya has sido dado de alta");
         empleadosPrestamista[nuevoPrestamista]=true;
 
     }
